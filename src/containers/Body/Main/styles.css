@@ -1,0 +1,68 @@
+.Layer2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/fire.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    transition: 1s;
+}
+
+.Layer1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background: url("../../../assets/fire.jpg");
+    background-position: center;
+    z-index: 1;
+    transition: 1s;
+}
+    
+
+
+.Button{
+    position: relative;
+    width:80px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-family: "montserrat";
+    text-decoration: none;
+    margin: 10px 10px;
+    border: 2px solid #f7843d;
+    padding: 14px 60px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    cursor: pointer;
+}
+
+.Button::before{
+    background: #f7843d;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    
+}
+
+.Button:hover::before{
+    height: 380%;
+    }
